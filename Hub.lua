@@ -26,6 +26,7 @@ local function getObjGen()
                 Toggle = Instance.new("Frame"),
                 UIPadding = Instance.new("UIPadding"),
                 UIGradient_2 = Instance.new("UIGradient"),
+                Logo = Instance.new("Frame"),
                 UICorner_5 = Instance.new("UICorner"),
                 DropShadowHolder_2 = Instance.new("Frame"),
                 DropShadow_2 = Instance.new("ImageLabel"),
@@ -434,6 +435,26 @@ local function getObjGen()
             Gui.DropShadow_2.ImageTransparency = 0.500
             Gui.DropShadow_2.ScaleType = Enum.ScaleType.Slice
             Gui.DropShadow_2.SliceCenter = Rect.new(49, 49, 450, 450)
+
+
+            Gui.Logo.Name = "Logo"
+            Gui.Logo.Parent = Gui.Cheats_2
+            Gui.Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            Gui.Logo.BackgroundTransparency = 1.000
+            Gui.Logo.LayoutOrder = -5
+            Gui.Logo.Size = UDim2.new(1, 0, 0.100000001, 0)
+            Gui.Logo.ZIndex = 122
+            Gui.Logo.Image = "rbxassetid://8343875413"
+            Gui.Logo.ImageColor3 = Color3.fromRGB(134, 142, 255)
+            Gui.Logo.ScaleType = Enum.ScaleType.Fit
+
+            Gui.UIGradient_5.Color =
+                ColorSequence.new {
+                ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)),
+                ColorSequenceKeypoint.new(1.00, Color3.fromRGB(163, 163, 163))
+            }
+            Gui.UIGradient_5.Rotation = 45
+            Gui.UIGradient_5.Parent = Gui.Logo
 
             Gui.Content.Name = "Content"
             Gui.Content.Parent = Gui.Toggle
@@ -891,7 +912,6 @@ local function getObjGen()
             Gui.Icon_2.BackgroundTransparency = 1.000
             Gui.Icon_2.Size = UDim2.new(1, 0, 1, 0)
             Gui.Icon_2.ZIndex = 111
-            Gui.Icon_2.Image = "rbxassetid://7072706663"
             Gui.Icon_2.ImageColor3 = Color3.fromRGB(100, 100, 100)
             Gui.Icon_2.ScaleType = Enum.ScaleType.Fit
 
@@ -3239,7 +3259,7 @@ function UILibrary.new(gameName, userId, rank)
     local AspectRatio = Instance.new("UIAspectRatioConstraint", Frame)
     AspectRatio.AspectRatio = 1.2
 
-    Frame.Parent = window.MainUI.Sidebar.ContentHolder.Cheats
+    Frame.Parent = window.MainUI.Sidebar.ContentHolder.Cheats.Logo
     Frame.ZIndex = 300
 
     local Drag = Draggable.Drag(window.MainUI, Frame)
